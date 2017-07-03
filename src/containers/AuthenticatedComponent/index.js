@@ -8,11 +8,9 @@ export default function requireAuthentication(Component) {
 
     componentWillMount() {
       this.checkAuth(this.props.login.isAuthenticated)
-      console.log('isAuthenticated', this.props.login.isAuthenticated);
     }
 
     componentWillReceiveProps(nextProps) {
-      console.log('nextProps_isAuthenticated', nextProps.login.isAuthenticated);
       this.checkAuth(nextProps.login.isAuthenticated)
     }
 

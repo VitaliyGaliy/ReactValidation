@@ -32,7 +32,6 @@ export const deleteItemInLS = ad => dispatch => new Promise(resolve => setTimeou
   const adInLS = JSON.parse(localStorage.getItem('advts'))
   const advts = JSON.stringify(adInLS.filter(a => a.id !== ad))
   localStorage.setItem('advts', advts)
-  console.log('DELETEadvtsLS', advts);
   resolve(ad)
 }, 20))
   .then(ad => dispatch(deleteAd(ad)))
@@ -75,7 +74,6 @@ export const updateAdInLS = ad => dispatch => new Promise(resolve => setTimeout(
   })
   const advts = JSON.stringify(editedAdInLS)
   localStorage.setItem('advts', advts)
-  console.log('advts11', advts);
   resolve(ad)
 }, 20))
   .then(ad => dispatch(updateAd(ad)))

@@ -21,7 +21,7 @@ class AdPage extends Component {
     super();
     this.state = {
       currentPage: 1,
-      todosPerPage: 3,
+      todosPerPage: 5,
       activeButton: 1
     }
      this.bindAll('setButtonPage', 'leftArrow', 'rightArrow')
